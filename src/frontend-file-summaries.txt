@@ -1,0 +1,22 @@
+{
+  "frontend/src/App.tsx": "Main application component that orchestrates the single-page romantic proposal website with all sections, ambient effects, music controls, and navigation.",
+  "frontend/src/index.css": "Global styles with romantic OKLCH color palette (blush pink, rose, gold, love-red), custom fonts (Playfair Display, Dancing Script, Lora), glow effects, and smooth animations with reduced-motion support.",
+  "frontend/tailwind.config.js": "Extended Tailwind configuration with romantic color scales (blush, rose, gold, love-red), custom shadows, border radii, and animation keyframes for heartbeat, float, and fade effects.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with animated heartbeat effect, main heading \"Hey Urvi Ji ❤️\", romantic subtext, and floating decorative hearts.",
+  "frontend/src/components/sections/LoveStorySection.tsx": "Love story timeline section with three cards describing how they met, why she's special, and the \"good boy\" moment, with scroll-reveal animations.",
+  "frontend/src/components/sections/GallerySection.tsx": "Photo gallery carousel displaying initial images with ability to add more photos client-side, featuring rounded corners, shadows, and cinematic transitions.",
+  "frontend/src/components/sections/MessageFromMeSection.tsx": "Handwritten-style message section displaying \"I may not be perfect, but my love for you is pure and forever\" with decorative hearts and signature.",
+  "frontend/src/components/sections/ProposalSection.tsx": "Main proposal section with glowing text, two YES buttons, heart burst animation trigger, and modal integration.",
+  "frontend/src/components/Footer.tsx": "Footer component displaying \"Made with endless love by Mann\" with animated heart icon.",
+  "frontend/src/components/effects/AmbientEffects.tsx": "Canvas-based ambient effects rendering floating hearts and falling rose petals with performance optimization and reduced-motion support, now with proper useRef initialization.",
+  "frontend/src/components/effects/HeartBurst.tsx": "Celebratory heart burst animation effect triggered when proposal buttons are clicked, creating an explosion of colorful hearts.",
+  "frontend/src/components/modals/ProposalModal.tsx": "Accessible modal dialog displaying success message \"You just made me the happiest person alive 💕\" after proposal acceptance.",
+  "frontend/src/components/controls/MusicControls.tsx": "Music player controls with play/pause, volume slider, and mute functionality, persisting state in session storage.",
+  "frontend/src/components/controls/EffectsToggle.tsx": "Toggle button to enable/disable ambient floating effects (hearts and petals) with tooltip and session persistence.",
+  "frontend/src/components/controls/CopyLinkButton.tsx": "Button to copy current page URL to clipboard with visual feedback and toast notification.",
+  "frontend/src/components/controls/SectionNav.tsx": "Fixed side navigation showing current section with smooth scroll-to functionality for all major sections.",
+  "frontend/src/hooks/useScrollReveal.ts": "Custom hook using IntersectionObserver to trigger animations when elements scroll into view.",
+  "frontend/src/hooks/useSessionStorageState.ts": "Custom hook for managing state that persists in sessionStorage across page interactions.",
+  "frontend/src/hooks/useQueries.ts": "Empty placeholder file as backend has no methods (frontend-only application).",
+  "frontend/index.html": "HTML entry point with romantic title, meta tags, and favicon reference."
+}

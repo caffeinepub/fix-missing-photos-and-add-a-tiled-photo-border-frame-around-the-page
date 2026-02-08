@@ -1,0 +1,294 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Premium romantic single-page proposal website for Urvi Ji",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Establish a cohesive premium romantic theme (palette, glow/gradients, and consistent typography with serif headings + handwritten personal text).",
+      "acceptanceCriteria": [
+        "All sections share a cohesive romantic premium style (palette, spacing, typography).",
+        "No blue/purple is used as a primary theme color.",
+        "Handwritten-style typography is used for the personal message section."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global Tailwind/CSS theme tokens and base styles: blush pink/red/white with gold accents, soft glow/gradient utilities, consistent spacing, serif heading stack + handwritten-style stack for personal messages, and reduced-motion variants (prefers-reduced-motion)."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme with romantic palette aliases (blush/red/gold), gradient presets, and keyframes (soft-fade/float/heartbeat) to ensure consistent premium styling across sections."
+        },
+        {
+          "path": "frontend/src/components/RomanticLayout.tsx",
+          "operation": "create",
+          "description": "Create a layout wrapper that applies the dreamy background, consistent typography classes, section spacing, and a readable content container for the single-page experience."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Implement the Hero section with exact heading/subtext, heart-beat animation, and subtle entrance animation on load.",
+      "acceptanceCriteria": [
+        "Hero displays the exact requested strings (including emoji).",
+        "Heart-beat animation loops smoothly without jank on mobile.",
+        "Hero content is centered and responsive across common phone sizes."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create the Hero section component with exact text: \"Hey Urvi Ji ❤️\" and \"From the moment you came into my life, everything became more beautiful.\" Include a heart element with looping heartbeat animation and an on-load entrance animation (respecting reduced motion)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page App composing all required sections and ensure Hero is rendered at the top with centered, responsive layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Add floating hearts and falling rose petals ambient background effects, with performance safeguards and reduced/disabled motion support via toggle and OS preference.",
+      "acceptanceCriteria": [
+        "Hearts and petals animate continuously without blocking scrolling.",
+        "Animations degrade gracefully (reduced density/disabled) when reduced motion is enabled or via an on-page toggle.",
+        "Effects do not obscure text readability (proper opacity and layering)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/romantic-bg-pattern.dim_2048x2048.png",
+          "operation": "create",
+          "description": "Add generated asset at frontend/public/assets/generated/romantic-bg-pattern.dim_2048x2048.png and wire it as a subtle page background pattern (Verify the component's usage instructions before implementing)."
+        },
+        {
+          "path": "frontend/public/assets/generated/rose-petals-sprite.dim_512x512.png",
+          "operation": "create",
+          "description": "Add generated asset at frontend/public/assets/generated/rose-petals-sprite.dim_512x512.png for petal particles (Verify the component's usage instructions before implementing)."
+        },
+        {
+          "path": "frontend/public/assets/generated/hearts-sprite.dim_512x512.png",
+          "operation": "create",
+          "description": "Add generated asset at frontend/public/assets/generated/hearts-sprite.dim_512x512.png for heart particles (Verify the component's usage instructions before implementing)."
+        },
+        {
+          "path": "frontend/src/components/effects/AmbientEffects.tsx",
+          "operation": "create",
+          "description": "Implement a performant ambient effects layer (canvas or lightweight DOM) that renders floating hearts + falling petals using the provided sprite sheets; ensure proper z-index/opacity so content stays readable; respect prefers-reduced-motion by disabling/reducing particle density."
+        },
+        {
+          "path": "frontend/src/components/controls/EffectsToggle.tsx",
+          "operation": "create",
+          "description": "Add an on-page toggle control to enable/disable or reduce ambient effects for the current session; persist choice in sessionStorage; ensure accessibility labels and high contrast."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire AmbientEffects and EffectsToggle into the single-page layout so effects apply across the page without blocking scrolling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add gentle romantic instrumental background music with a visible toggle (play/pause + volume or mute), respecting autoplay policies and persisting session choice.",
+      "acceptanceCriteria": [
+        "A visible music control is available and works on mobile and desktop.",
+        "Music does not unexpectedly autoplay with sound; playback begins only after user gesture or starts muted.",
+        "Toggling music updates immediately and does not reset on scroll within the session."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/music/romantic-instrumental.mp3",
+          "operation": "create",
+          "description": "Add a local romantic instrumental audio file at frontend/public/assets/music/romantic-instrumental.mp3 (no external streaming)."
+        },
+        {
+          "path": "frontend/src/hooks/useSessionStorageState.ts",
+          "operation": "create",
+          "description": "Create a small hook for session-scoped state persistence (e.g., music enabled, volume/muted, effects toggle)."
+        },
+        {
+          "path": "frontend/src/components/controls/MusicControls.tsx",
+          "operation": "create",
+          "description": "Implement music controls using an <audio> element: start muted by default (or require explicit user interaction to play), provide play/pause and volume or mute controls, and persist settings in sessionStorage."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Place MusicControls in a fixed, unobtrusive position (e.g., top/right) within the single-page layout and ensure it remains usable on mobile."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create a Love Story timeline/card section with three requested beats and editable English placeholder copy, plus gentle scroll-in animations.",
+      "acceptanceCriteria": [
+        "The Love Story section clearly contains three distinct items matching the requested topics.",
+        "Layout is responsive: vertical stacking on mobile; timeline/cards adapt cleanly to larger screens.",
+        "Each item has soft animation on scroll-in (non-intrusive)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/LoveStorySection.tsx",
+          "operation": "create",
+          "description": "Implement a responsive timeline/card layout with three items titled: “How we met”, “Why she is special”, and “How she calls me ‘good boy’ and how that makes me feel loved”, each with well-written editable English placeholder copy."
+        },
+        {
+          "path": "frontend/src/hooks/useScrollReveal.ts",
+          "operation": "create",
+          "description": "Create a lightweight IntersectionObserver-based hook to apply subtle scroll-in animations (and disable/soften when prefers-reduced-motion is enabled)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire LoveStorySection into the single-page flow with an anchored section id for smooth scrolling navigation."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Build a Photo Gallery section with an animated carousel using the two provided images and an Add Photos flow to add client-side images for the session only.",
+      "acceptanceCriteria": [
+        "Carousel renders and transitions smoothly between the two provided images.",
+        "Gallery cards/images have rounded corners and subtle shadow consistent with the premium theme.",
+        "User can add additional images via file picker and see them appear in the slider for the current session.",
+        "No crash if the user adds a large image; slider remains usable (with sensible limits/error messaging)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/gallery/Snapchat-869212999.jpg",
+          "operation": "create",
+          "description": "Add the provided image as a static asset at frontend/public/assets/gallery/Snapchat-869212999.jpg for initial gallery slides."
+        },
+        {
+          "path": "frontend/public/assets/gallery/Snapchat-261174748.jpg",
+          "operation": "create",
+          "description": "Add the provided image as a static asset at frontend/public/assets/gallery/Snapchat-261174748.jpg for initial gallery slides."
+        },
+        {
+          "path": "frontend/src/components/sections/GallerySection.tsx",
+          "operation": "create",
+          "description": "Implement a soft animated slider/carousel with cinematic transitions, rounded corners, and subtle shadows; initialize with the two provided images; include an “Add photos” UX using a file input to append images client-side for the session (no backend). Add size/type limits and user-friendly error messaging for large images."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire GallerySection into the single-page flow with an anchored section id and ensure it remains responsive and touch-friendly on mobile."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add a “Message From Me” section with exact handwritten-style text and subtle paper/ink styling with high readability and scroll-in animation.",
+      "acceptanceCriteria": [
+        "The section displays the exact requested string (including punctuation).",
+        "Handwritten-style font is applied and remains readable on mobile.",
+        "Section has gentle scroll-in animation consistent with the rest of the page."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/MessageFromMeSection.tsx",
+          "operation": "create",
+          "description": "Create the Message From Me section rendering the exact string: “I may not be perfect, but my love for you is pure and forever.” Apply handwritten-style font stack and subtle paper/ink styling while maintaining contrast and legibility; include gentle scroll-in animation via the shared reveal hook."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire MessageFromMeSection into the single-page flow with consistent spacing and anchored section id."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Create the Proposal highlight section with exact glowing prompt, two animated buttons, celebratory heart-burst animation on click, and an accessible dismissible modal with exact message.",
+      "acceptanceCriteria": [
+        "Proposal text and both button labels match exactly (including emojis).",
+        "Clicking either button opens a modal/pop-up with the exact requested message.",
+        "A visible celebratory animation plays on click (heart burst/explosion) without blocking UI interaction.",
+        "Modal can be dismissed and is accessible (keyboard focus, close button)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/ProposalSection.tsx",
+          "operation": "create",
+          "description": "Implement the proposal highlight with large glowing text: “Urvi Ji, will you be my Valentine? 💍❤️” and two animated buttons labeled exactly “💖 YES” and “😜 Of course YES”. Trigger a celebratory heart-burst animation on either click and open a modal message: “You just made me the happiest person alive 💕”."
+        },
+        {
+          "path": "frontend/src/components/effects/HeartBurst.tsx",
+          "operation": "create",
+          "description": "Create a lightweight celebratory heart burst/explosion effect (CSS/canvas) that plays on demand and respects reduced motion; ensure it does not block interactions."
+        },
+        {
+          "path": "frontend/src/components/modals/ProposalModal.tsx",
+          "operation": "create",
+          "description": "Create an accessible modal component for the proposal confirmation (focus management, close button, escape-to-close, overlay click handling). If using shadcn-ui Dialog, use the existing shadcn-ui component to provide accessibility and modal primitives; Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ProposalSection so button clicks open the modal and trigger HeartBurst, keeping UI responsive and maintaining single-page flow."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Add a themed footer with the exact credit line.",
+      "acceptanceCriteria": [
+        "Footer renders at the bottom of the page and shows: “Made with endless love by Mann”.",
+        "Footer styling matches the site theme and remains readable on small screens."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Footer.tsx",
+          "operation": "create",
+          "description": "Create a footer component that renders the exact text “Made with endless love by Mann” with theme-consistent styling and mobile-safe spacing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire Footer at the bottom of the single-page layout."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Implement smooth single-page navigation (section nav and/or scroll behavior), ensure mobile responsiveness and performance, and add a “Copy link” share control with feedback.",
+      "acceptanceCriteria": [
+        "All sections render correctly on mobile (no horizontal scrolling, no clipped text).",
+        "A “Copy link” (or equivalent) control copies the current URL and provides user feedback.",
+        "Scroll animations are smooth and do not cause layout shift.",
+        "Initial load remains performant (images are reasonably sized; effects are efficient)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/controls/SectionNav.tsx",
+          "operation": "create",
+          "description": "Add a small single-page section navigation (anchors to section ids) that uses smooth scrolling and remains unobtrusive on mobile; avoid multi-page routing."
+        },
+        {
+          "path": "frontend/src/components/controls/CopyLinkButton.tsx",
+          "operation": "create",
+          "description": "Implement a “Copy link” control that copies window.location.href via navigator.clipboard and shows clear success/failure feedback without heavy dependencies."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire SectionNav and CopyLinkButton into the layout; ensure each required section has a stable id; confirm overall responsiveness (no horizontal overflow) and keep animations/particles efficient."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Wire favicon and performance-friendly metadata: add a link tag for frontend/public/assets/generated/favicon-heart-gold.dim_256x256.png and ensure the document remains optimized for fast loading."
+        },
+        {
+          "path": "frontend/public/assets/generated/favicon-heart-gold.dim_256x256.png",
+          "operation": "create",
+          "description": "Add generated favicon asset at frontend/public/assets/generated/favicon-heart-gold.dim_256x256.png for the site icon (Verify the component's usage instructions before implementing)."
+        }
+      ]
+    }
+  ]
+}

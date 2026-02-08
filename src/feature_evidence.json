@@ -1,0 +1,202 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-website-with-a-premium-dreamy-romantic-visual-theme-using-blush-pink-red-white-and-gold-accents-include-soft-glow-gentle-gradients-and-consistent-typography-elegant-serif-for-headings-handwritten-style-font-for-personal-messages",
+      "featureTitle": "Create a single-page website with a premium, dreamy romantic visual theme using blush pink, red, white, and gold accents; include soft glow, gentle gradients, and consistent typography (elegant serif for headings + handwritten-style font for personal messages).",
+      "files": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-hero-section-with-the-exact-heading-text-hey-urvi-ji-and-sub-text-from-the-moment-you-came-into-my-life-everything-became-more-beautiful-add-a-visible-heart-beat-animation-on-near-the-hero-heart-and-subtle-entrance-animation-on-load",
+      "featureTitle": "Implement the Hero section with the exact heading text \"Hey Urvi Ji ❤️\" and sub-text \"From the moment you came into my life, everything became more beautiful.\" Add a visible heart-beat animation on/near the hero heart and subtle entrance animation on load.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/HeroSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-ambient-romantic-background-effects-across-the-page-1-floating-hearts-and-2-gently-falling-rose-petals-with-soft-blur-glow-ensure-the-effects-are-performant-and-can-be-reduced-disabled-based-on-user-preference-e-g-a-ui-toggle-or-respecting-reduced-motion",
+      "featureTitle": "Add ambient romantic background effects across the page: (1) floating hearts and (2) gently falling rose petals with soft blur/glow; ensure the effects are performant and can be reduced/disabled based on user preference (e.g., a UI toggle or respecting reduced motion).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/controls/EffectsToggle.tsx",
+        "frontend/src/components/effects/AmbientEffects.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-gentle-romantic-instrumental-background-music-with-a-clear-music-toggle-play-pause-volume-or-mute-follow-browser-autoplay-policies-by-starting-muted-or-only-starting-playback-after-explicit-user-interaction-persist-the-user-s-choice-for-the-session",
+      "featureTitle": "Add gentle romantic instrumental background music with a clear music toggle (play/pause + volume or mute). Follow browser autoplay policies by starting muted or only starting playback after explicit user interaction; persist the user’s choice for the session.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/controls/MusicControls.tsx",
+        "frontend/src/hooks/useSessionStorageState.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-love-story-section-as-a-timeline-or-card-style-layout-containing-the-three-requested-beats-how-we-met-why-she-is-special-and-how-she-calls-me-good-boy-and-how-that-makes-me-feel-loved-provide-well-written-english-copy-placeholders-for-each-card-timeline-node-editable-in-code",
+      "featureTitle": "Create a Love Story section as a timeline or card-style layout containing the three requested beats: “How we met”, “Why she is special”, and “How she calls me ‘good boy’ and how that makes me feel loved”. Provide well-written English copy placeholders for each card/timeline node (editable in code).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/LoveStorySection.tsx",
+        "frontend/src/hooks/useScrollReveal.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-photo-gallery-section-with-a-soft-animated-photo-slider-carousel-using-the-two-uploaded-images-snapchat-869212999-jpg-snapchat-261174748-jpg-as-initial-slides-style-it-with-rounded-corners-subtle-shadows-and-cinematic-transitions-include-an-add-photos-ux-that-lets-the-user-add-more-images-client-side-for-the-current-session-no-backend-persistence-required",
+      "featureTitle": "Implement a Photo Gallery section with a soft animated photo slider/carousel using the two uploaded images (Snapchat-869212999.jpg, Snapchat-261174748.jpg) as initial slides; style it with rounded corners, subtle shadows, and cinematic transitions. Include an “Add photos” UX that lets the user add more images client-side for the current session (no backend persistence required).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/GallerySection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-message-from-me-section-that-displays-the-exact-handwritten-style-text-i-may-not-be-perfect-but-my-love-for-you-is-pure-and-forever-include-subtle-paper-ink-styling-while-keeping-readability-high",
+      "featureTitle": "Add a “Message From Me” section that displays the exact handwritten-style text: “I may not be perfect, but my love for you is pure and forever.” Include subtle paper/ink styling while keeping readability high.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/sections/MessageFromMeSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-the-proposal-section-as-the-main-highlight-with-large-glowing-text-urvi-ji-will-you-be-my-valentine-and-two-animated-buttons-labeled-exactly-yes-and-of-course-yes-on-click-of-either-button-trigger-a-celebratory-heart-explodes-with-love-animation-and-show-a-sweet-pop-up-modal-message-you-just-made-me-the-happiest-person-alive",
+      "featureTitle": "Create the Proposal section as the main highlight with large glowing text: “Urvi Ji, will you be my Valentine? 💍❤️” and two animated buttons labeled exactly “💖 YES” and “😜 Of course YES”. On click of either button, trigger a celebratory “heart explodes with love” animation and show a sweet pop-up/modal message: “You just made me the happiest person alive 💕”.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/effects/HeartBurst.tsx",
+        "frontend/src/components/modals/ProposalModal.tsx",
+        "frontend/src/components/sections/ProposalSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-footer-with-the-exact-text-made-with-endless-love-by-mann-use-mann-from-the-provided-name",
+      "featureTitle": "Add a Footer with the exact text “Made with endless love by Mann” (use Mann from the provided name).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Footer.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-smooth-scrolling-navigation-behavior-for-a-single-page-flow-e-g-subtle-scroll-snapping-or-a-small-section-nav-and-ensure-the-entire-page-is-mobile-responsive-and-fast-loading-optimize-assets-avoid-heavy-libraries-provide-a-clear-way-to-share-the-link-e-g-a-copy-link-button-that-copies-window-location-href",
+      "featureTitle": "Implement smooth scrolling navigation behavior for a single-page flow (e.g., subtle scroll snapping or a small section nav) and ensure the entire page is mobile responsive and fast-loading (optimize assets, avoid heavy libraries). Provide a clear way to share the link (e.g., a “Copy link” button that copies window.location.href).",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/controls/CopyLinkButton.tsx",
+        "frontend/src/components/controls/SectionNav.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

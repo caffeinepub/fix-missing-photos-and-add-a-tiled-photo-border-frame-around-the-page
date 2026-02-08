@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Lora:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        
+        /* Romantic blush pink, red, white, and gold palette */
+        --background: 0.99 0.01 10;
+        --foreground: 0.25 0.02 10;
+        
+        --card: 1 0 0;
+        --card-foreground: 0.25 0.02 10;
+        
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.02 10;
+        
+        /* Soft rose/blush primary */
+        --primary: 0.75 0.15 15;
+        --primary-foreground: 1 0 0;
+        
+        /* Light blush secondary */
+        --secondary: 0.95 0.05 15;
+        --secondary-foreground: 0.35 0.03 15;
+        
+        --muted: 0.96 0.02 15;
+        --muted-foreground: 0.55 0.02 15;
+        
+        /* Gold accent */
+        --accent: 0.80 0.12 70;
+        --accent-foreground: 0.25 0.02 70;
+        
+        /* Red for love */
+        --destructive: 0.60 0.25 25;
+        --destructive-foreground: 1 0 0;
+        
+        --border: 0.92 0.03 15;
+        --input: 0.92 0.03 15;
+        --ring: 0.75 0.15 15;
+        
+        /* Custom romantic colors */
+        --blush: 0.90 0.08 15;
+        --rose: 0.70 0.20 15;
+        --gold: 0.80 0.12 70;
+        --love-red: 0.60 0.25 25;
+    }
+
+    .dark {
+        --background: 0.20 0.02 15;
+        --foreground: 0.98 0.01 15;
+        
+        --card: 0.25 0.02 15;
+        --card-foreground: 0.98 0.01 15;
+        
+        --popover: 0.22 0.02 15;
+        --popover-foreground: 0.98 0.01 15;
+        
+        --primary: 0.80 0.15 15;
+        --primary-foreground: 0.20 0.02 15;
+        
+        --secondary: 0.30 0.03 15;
+        --secondary-foreground: 0.98 0.01 15;
+        
+        --muted: 0.28 0.02 15;
+        --muted-foreground: 0.65 0.02 15;
+        
+        --accent: 0.75 0.12 70;
+        --accent-foreground: 0.98 0.01 70;
+        
+        --destructive: 0.65 0.25 25;
+        --destructive-foreground: 0.98 0.01 25;
+        
+        --border: 0.35 0.02 15;
+        --input: 0.35 0.02 15;
+        --ring: 0.70 0.15 15;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Lora', serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+    }
+    
+    .handwritten {
+        font-family: 'Dancing Script', cursive;
+    }
+}
+
+@layer utilities {
+    /* Romantic glow effects */
+    .glow-soft {
+        box-shadow: 0 0 20px rgba(255, 182, 193, 0.3),
+                    0 0 40px rgba(255, 182, 193, 0.2);
+    }
+    
+    .glow-gold {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.3),
+                    0 0 40px rgba(255, 215, 0, 0.2);
+    }
+    
+    .glow-love {
+        box-shadow: 0 0 30px rgba(255, 105, 135, 0.4),
+                    0 0 60px rgba(255, 105, 135, 0.3);
+        animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    /* Animations */
+    @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        10%, 30% { transform: scale(1.1); }
+        20%, 40% { transform: scale(1); }
+    }
+    
+    @keyframes pulse-glow {
+        0%, 100% { 
+            box-shadow: 0 0 30px rgba(255, 105, 135, 0.4),
+                        0 0 60px rgba(255, 105, 135, 0.3);
+        }
+        50% { 
+            box-shadow: 0 0 40px rgba(255, 105, 135, 0.6),
+                        0 0 80px rgba(255, 105, 135, 0.4);
+        }
+    }
+    
+    @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-20px); }
+    }
+    
+    @keyframes fade-in-up {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    @keyframes fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    
+    .animate-heartbeat {
+        animation: heartbeat 1.5s ease-in-out infinite;
+    }
+    
+    .animate-float {
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    .animate-fade-in-up {
+        animation: fade-in-up 0.8s ease-out forwards;
+    }
+    
+    .animate-fade-in {
+        animation: fade-in 1s ease-out forwards;
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+        .animate-heartbeat,
+        .animate-float,
+        .animate-fade-in-up,
+        .animate-fade-in {
+            animation: none;
+        }
+        
+        .glow-love {
+            animation: none;
+        }
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+        html {
+            scroll-behavior: auto;
+        }
+    }
+}

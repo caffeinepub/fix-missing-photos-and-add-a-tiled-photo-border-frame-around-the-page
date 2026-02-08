@@ -1,0 +1,154 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Premium romantic single-page proposal website for Mann to ask Urvi Ji to be his Valentine/life partner, featuring animated romantic visuals, music, story timeline, gallery, and interactive proposal CTA.",
+  "architectural_notes": [
+    "Single-page responsive proposal site with emphasis on performance (fast loading) despite animation effects.",
+    "Include a background music toggle (user-controlled audio)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Seamless romantic background pattern with subtle hearts and sparkles (romantic-bg-pattern.dim_2048x2048.png)\n- Rose petal particle sprite sheet, soft semi-transparent petals (rose-petals-sprite.dim_512x512.png)\n- Heart particle sprite sheet, soft semi-transparent hearts (hearts-sprite.dim_512x512.png)\n- Gold-accent favicon with heart motif (favicon-heart-gold.dim_256x256.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-single-page-website-with-a-premium-dreamy-romantic-visual-theme-using-blush-pink-red-white-and-gold-accents-include-soft-glow-gentle-gradients-and-consistent-typography-elegant-serif-for-headings-handwritten-style-font-for-personal-messages",
+      "title": "Create a single-page website with a premium, dreamy romantic visual theme using blush pink, red, white, and gold accents; include soft glow, gentle gradients, and consistent typography (elegant serif for headings + handwritten-style font for personal messages).",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-hero-section-with-the-exact-heading-text-hey-urvi-ji-and-sub-text-from-the-moment-you-came-into-my-life-everything-became-more-beautiful-add-a-visible-heart-beat-animation-on-near-the-hero-heart-and-subtle-entrance-animation-on-load",
+      "title": "Implement the Hero section with the exact heading text \"Hey Urvi Ji ❤️\" and sub-text \"From the moment you came into my life, everything became more beautiful.\" Add a visible heart-beat animation on/near the hero heart and subtle entrance animation on load.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-ambient-romantic-background-effects-across-the-page-1-floating-hearts-and-2-gently-falling-rose-petals-with-soft-blur-glow-ensure-the-effects-are-performant-and-can-be-reduced-disabled-based-on-user-preference-e-g-a-ui-toggle-or-respecting-reduced-motion",
+      "title": "Add ambient romantic background effects across the page: (1) floating hearts and (2) gently falling rose petals with soft blur/glow; ensure the effects are performant and can be reduced/disabled based on user preference (e.g., a UI toggle or respecting reduced motion).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-gentle-romantic-instrumental-background-music-with-a-clear-music-toggle-play-pause-volume-or-mute-follow-browser-autoplay-policies-by-starting-muted-or-only-starting-playback-after-explicit-user-interaction-persist-the-user-s-choice-for-the-session",
+      "title": "Add gentle romantic instrumental background music with a clear music toggle (play/pause + volume or mute). Follow browser autoplay policies by starting muted or only starting playback after explicit user interaction; persist the user’s choice for the session.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-love-story-section-as-a-timeline-or-card-style-layout-containing-the-three-requested-beats-how-we-met-why-she-is-special-and-how-she-calls-me-good-boy-and-how-that-makes-me-feel-loved-provide-well-written-english-copy-placeholders-for-each-card-timeline-node-editable-in-code",
+      "title": "Create a Love Story section as a timeline or card-style layout containing the three requested beats: “How we met”, “Why she is special”, and “How she calls me ‘good boy’ and how that makes me feel loved”. Provide well-written English copy placeholders for each card/timeline node (editable in code).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-photo-gallery-section-with-a-soft-animated-photo-slider-carousel-using-the-two-uploaded-images-snapchat-869212999-jpg-snapchat-261174748-jpg-as-initial-slides-style-it-with-rounded-corners-subtle-shadows-and-cinematic-transitions-include-an-add-photos-ux-that-lets-the-user-add-more-images-client-side-for-the-current-session-no-backend-persistence-required",
+      "title": "Implement a Photo Gallery section with a soft animated photo slider/carousel using the two uploaded images (Snapchat-869212999.jpg, Snapchat-261174748.jpg) as initial slides; style it with rounded corners, subtle shadows, and cinematic transitions. Include an “Add photos” UX that lets the user add more images client-side for the current session (no backend persistence required).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-message-from-me-section-that-displays-the-exact-handwritten-style-text-i-may-not-be-perfect-but-my-love-for-you-is-pure-and-forever-include-subtle-paper-ink-styling-while-keeping-readability-high",
+      "title": "Add a “Message From Me” section that displays the exact handwritten-style text: “I may not be perfect, but my love for you is pure and forever.” Include subtle paper/ink styling while keeping readability high.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-the-proposal-section-as-the-main-highlight-with-large-glowing-text-urvi-ji-will-you-be-my-valentine-and-two-animated-buttons-labeled-exactly-yes-and-of-course-yes-on-click-of-either-button-trigger-a-celebratory-heart-explodes-with-love-animation-and-show-a-sweet-pop-up-modal-message-you-just-made-me-the-happiest-person-alive",
+      "title": "Create the Proposal section as the main highlight with large glowing text: “Urvi Ji, will you be my Valentine? 💍❤️” and two animated buttons labeled exactly “💖 YES” and “😜 Of course YES”. On click of either button, trigger a celebratory “heart explodes with love” animation and show a sweet pop-up/modal message: “You just made me the happiest person alive 💕”.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-footer-with-the-exact-text-made-with-endless-love-by-mann-use-mann-from-the-provided-name",
+      "title": "Add a Footer with the exact text “Made with endless love by Mann” (use Mann from the provided name).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-smooth-scrolling-navigation-behavior-for-a-single-page-flow-e-g-subtle-scroll-snapping-or-a-small-section-nav-and-ensure-the-entire-page-is-mobile-responsive-and-fast-loading-optimize-assets-avoid-heavy-libraries-provide-a-clear-way-to-share-the-link-e-g-a-copy-link-button-that-copies-window-location-href",
+      "title": "Implement smooth scrolling navigation behavior for a single-page flow (e.g., subtle scroll snapping or a small section nav) and ensure the entire page is mobile responsive and fast-loading (optimize assets, avoid heavy libraries). Provide a clear way to share the link (e.g., a “Copy link” button that copies window.location.href).",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Design romantic single-page layout with premium blush/red/white palette, gold accents, soft glow, and smooth animations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Hero section with heading “Hey Urvi Ji ❤️”, subtext, heartbeat animation, and gentle romantic instrumental background music",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Ambient romantic effects: floating hearts and rose petals gently falling",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Love Story section as timeline/card layout covering how we met, why she is special, and “good boy” mention",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Photo Gallery section with soft animated photo slider (rounded corners, subtle shadows, cinematic transitions)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Message From Me section with handwritten-style text rendering",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Proposal highlight section with glowing text and two animated YES buttons; clicking shows sweet popup and love animation",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Footer with “Made with endless love by Mann” (or configurable name)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Extras: mobile responsive, fast loading, shareable link, music toggle, and smooth scroll animations",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Premium romantic single-page proposal website for Urvi Ji (with animations, gallery, and music)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

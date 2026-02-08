@@ -1,0 +1,85 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T16:40:24.120Z",
+  "summary": "The diff adds a single-page romantic proposal app with hero, love story, gallery, message, proposal modal + heart burst, ambient canvas effects (with toggle + reduced-motion), music controls (session-persisted), section nav with smooth scrolling, and a copy-link button. Several spec items appear implemented, but some requirements (notably required asset usage like sprite sheets/favicon and strict exact-string constraints) are not fully evidenced in the diff summary.",
+  "missing_requirements": [
+    {
+      "id": "REQ-1",
+      "requirement": "Use consistent typography with an elegant serif for headings and a handwritten-style font for personal messages.",
+      "reason": "The sections reference a `handwritten` class, but the diff summary does not show any font imports or CSS/Tailwind configuration that actually defines an elegant serif heading font or a handwritten font face.",
+      "evidence": [
+        "frontend/src/components/sections/MessageFromMeSection.tsx"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "requirement": "Use the required heart and rose petal particle sprite sheets (hearts-sprite.dim_512x512.png and rose-petals-sprite.dim_512x512.png) for ambient effects.",
+      "reason": "Ambient effects are drawn procedurally on a canvas using vector paths/ellipses and do not reference the required sprite sheet image assets.",
+      "evidence": [
+        "frontend/src/components/effects/AmbientEffects.tsx"
+      ]
+    },
+    {
+      "requirement": "Include and use the required gold-accent favicon (favicon-heart-gold.dim_256x256.png).",
+      "reason": "No favicon configuration or reference is shown in the provided diff summary files.",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Additional user-facing modal description text beyond the exact required modal message.",
+      "reason": "REQ-8 requires showing the exact modal/pop-up message “You just made me the happiest person alive 💕”. The modal also includes extra descriptive sentences and an additional heart emoji line, which are not requested and may violate the constraint to use the exact English strings provided by the user.",
+      "evidence": [
+        "frontend/src/components/modals/ProposalModal.tsx"
+      ]
+    },
+    {
+      "description": "Extra user-facing toast strings for the copy-link feature (e.g., “Link copied to clipboard!”, “Failed to copy link”).",
+      "reason": "REQ-10 requires a copy-link control with user feedback but does not specify these exact strings; given the constraint about using exact provided English strings, these added texts may be out of scope.",
+      "evidence": [
+        "frontend/src/components/controls/CopyLinkButton.tsx"
+      ]
+    },
+    {
+      "description": "Extra user-facing text in the Proposal section subtext: “(There's only one right answer... and you know what it is! 💕)”.",
+      "reason": "REQ-8 specifies exact proposal text and button labels, plus the exact modal message. This additional line is not requested and introduces extra copy.",
+      "evidence": [
+        "frontend/src/components/sections/ProposalSection.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.66,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Footer.tsx",
+    "frontend/src/components/controls/CopyLinkButton.tsx",
+    "frontend/src/components/controls/EffectsToggle.tsx",
+    "frontend/src/components/controls/MusicControls.tsx",
+    "frontend/src/components/controls/SectionNav.tsx",
+    "frontend/src/components/effects/AmbientEffects.tsx",
+    "frontend/src/components/effects/HeartBurst.tsx",
+    "frontend/src/components/modals/ProposalModal.tsx",
+    "frontend/src/components/sections/GallerySection.tsx",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/LoveStorySection.tsx",
+    "frontend/src/components/sections/MessageFromMeSection.tsx",
+    "frontend/src/components/sections/ProposalSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useScrollReveal.ts",
+    "frontend/src/hooks/useSessionStorageState.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

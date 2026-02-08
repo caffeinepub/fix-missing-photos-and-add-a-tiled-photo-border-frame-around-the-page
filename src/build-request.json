@@ -1,0 +1,229 @@
+{
+  "kind": "build_request",
+  "title": "Premium romantic single-page proposal website for Urvi Ji (with animations, gallery, and music)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a single-page website with a premium, dreamy romantic visual theme using blush pink, red, white, and gold accents; include soft glow, gentle gradients, and consistent typography (elegant serif for headings + handwritten-style font for personal messages).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Theme & Feel:\nSoft romantic vibes, love, warmth, dreamy mood, premium look.\nColor palette: blush pink, red, white, and gold accents."
+        ]
+      },
+      "acceptanceCriteria": [
+        "All sections share a cohesive romantic premium style (palette, spacing, typography).",
+        "No blue/purple is used as a primary theme color.",
+        "Handwritten-style typography is used for the personal message section."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the Hero section with the exact heading text \"Hey Urvi Ji ❤️\" and sub-text \"From the moment you came into my life, everything became more beautiful.\" Add a visible heart-beat animation on/near the hero heart and subtle entrance animation on load.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Hero Section:\nBig romantic heading:\n“Hey Urvi Ji ❤️”\nSub-text:\n“From the moment you came into my life, everything became more beautiful.”\nAdd a heart-beat animation"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hero displays the exact requested strings (including emoji).",
+        "Heart-beat animation loops smoothly without jank on mobile.",
+        "Hero content is centered and responsive across common phone sizes."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Add ambient romantic background effects across the page: (1) floating hearts and (2) gently falling rose petals with soft blur/glow; ensure the effects are performant and can be reduced/disabled based on user preference (e.g., a UI toggle or respecting reduced motion).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Smooth animations, floating hearts, rose petals gently falling, soft glow effects.",
+          "Extras:\n– Smooth scroll animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Hearts and petals animate continuously without blocking scrolling.",
+        "Animations degrade gracefully (reduced density/disabled) when reduced motion is enabled or via an on-page toggle.",
+        "Effects do not obscure text readability (proper opacity and layering)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add gentle romantic instrumental background music with a clear music toggle (play/pause + volume or mute). Follow browser autoplay policies by starting muted or only starting playback after explicit user interaction; persist the user’s choice for the session.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Add a heart-beat animation and a gentle background music (romantic instrumental).",
+          "Extras:\n– Background romantic music toggle"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A visible music control is available and works on mobile and desktop.",
+        "Music does not unexpectedly autoplay with sound; playback begins only after user gesture or starts muted.",
+        "Toggling music updates immediately and does not reset on scroll within the session."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create a Love Story section as a timeline or card-style layout containing the three requested beats: “How we met”, “Why she is special”, and “How she calls me ‘good boy’ and how that makes me feel loved”. Provide well-written English copy placeholders for each card/timeline node (editable in code).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Love Story Section:\nA timeline or card-style section describing:\n– How we met\n– Why she is special\n– How she calls me “good boy” and how that makes me feel loved 🥰"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Love Story section clearly contains three distinct items matching the requested topics.",
+        "Layout is responsive: vertical stacking on mobile; timeline/cards adapt cleanly to larger screens.",
+        "Each item has soft animation on scroll-in (non-intrusive)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Implement a Photo Gallery section with a soft animated photo slider/carousel using the two uploaded images (Snapchat-869212999.jpg, Snapchat-261174748.jpg) as initial slides; style it with rounded corners, subtle shadows, and cinematic transitions. Include an “Add photos” UX that lets the user add more images client-side for the current session (no backend persistence required).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Photo Gallery Section:\nA soft animated photo slider to upload our memories together.\nRounded corners, subtle shadows, cinematic transitions.",
+          "The user has uploaded 2 image(s): Snapchat-869212999.jpg, Snapchat-261174748.jpg."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Carousel renders and transitions smoothly between the two provided images.",
+        "Gallery cards/images have rounded corners and subtle shadow consistent with the premium theme.",
+        "User can add additional images via file picker and see them appear in the slider for the current session.",
+        "No crash if the user adds a large image; slider remains usable (with sensible limits/error messaging)."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Add a “Message From Me” section that displays the exact handwritten-style text: “I may not be perfect, but my love for you is pure and forever.” Include subtle paper/ink styling while keeping readability high.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Message From Me Section:\nA handwritten-style text saying:\n“I may not be perfect, but my love for you is pure and forever.”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The section displays the exact requested string (including punctuation).",
+        "Handwritten-style font is applied and remains readable on mobile.",
+        "Section has gentle scroll-in animation consistent with the rest of the page."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create the Proposal section as the main highlight with large glowing text: “Urvi Ji, will you be my Valentine? 💍❤️” and two animated buttons labeled exactly “💖 YES” and “😜 Of course YES”. On click of either button, trigger a celebratory “heart explodes with love” animation and show a sweet pop-up/modal message: “You just made me the happiest person alive 💕”.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Proposal Section (Highlight):\nLarge glowing text:\n“Urvi Ji, will you be my Valentine? 💍❤️”\nTwo animated buttons:\n– 💖 YES (heart explodes with love animation)\n– 😜 Of course YES\nIf she clicks YES, show a sweet pop-up message:\n“You just made me the happiest person alive 💕”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Proposal text and both button labels match exactly (including emojis).",
+        "Clicking either button opens a modal/pop-up with the exact requested message.",
+        "A visible celebratory animation plays on click (heart burst/explosion) without blocking UI interaction.",
+        "Modal can be dismissed and is accessible (keyboard focus, close button)."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Add a Footer with the exact text “Made with endless love by Mann” (use Mann from the provided name).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Footer:\nText:\n“Made with endless love by [Your Name]”",
+          "My name is mann"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer renders at the bottom of the page and shows: “Made with endless love by Mann”.",
+        "Footer styling matches the site theme and remains readable on small screens."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Implement smooth scrolling navigation behavior for a single-page flow (e.g., subtle scroll snapping or a small section nav) and ensure the entire page is mobile responsive and fast-loading (optimize assets, avoid heavy libraries). Provide a clear way to share the link (e.g., a “Copy link” button that copies window.location.href).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Extras:\n– Mobile responsive\n– Fast loading\n– Shareable link\n– Smooth scroll animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All sections render correctly on mobile (no horizontal scrolling, no clipped text).",
+        "A “Copy link” (or equivalent) control copies the current URL and provides user feedback.",
+        "Scroll animations are smooth and do not cause layout shift.",
+        "Initial load remains performant (images are reasonably sized; effects are efficient)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Frontend immutable paths must not be edited: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Backend must remain single-actor architecture (do not introduce multiple canisters/services).",
+    "Use English for any user-facing text in the build request and implement the exact English strings provided by the user."
+  ],
+  "nonGoals": [
+    "Do not implement user accounts or Internet Identity authentication flows.",
+    "Do not add server-side storage for uploaded gallery photos (session-only client-side is sufficient).",
+    "Do not integrate third-party services (analytics, external music streaming, social APIs).",
+    "Do not build multi-page routing; keep it a single-page experience."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Seamless romantic background pattern with subtle hearts and sparkles (romantic-bg-pattern.dim_2048x2048.png)",
+      "Rose petal particle sprite sheet, soft semi-transparent petals (rose-petals-sprite.dim_512x512.png)",
+      "Heart particle sprite sheet, soft semi-transparent hearts (hearts-sprite.dim_512x512.png)",
+      "Gold-accent favicon with heart motif (favicon-heart-gold.dim_256x256.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [
+      "Build a premium romantic single-page proposal/Valentine website with animations, music, gallery, and an interactive proposal CTA."
+    ],
+    "goalsToRemove": [],
+    "preferencesToAdd": [
+      "Prefer blush pink/red/white palette with gold accents; dreamy premium romantic vibe; smooth animations; mobile-first responsiveness."
+    ],
+    "preferencesToRemove": [],
+    "miscToAdd": [
+      "Names: Mann (author), Urvi Ji (recipient)."
+    ],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}
